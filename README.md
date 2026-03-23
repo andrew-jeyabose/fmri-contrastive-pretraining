@@ -198,19 +198,18 @@ accuracy, sensitivity, specificity, F1, and AUC per functional network.
 
 ## Results Summary
 
-Pre-training on paired pre/post rs-fMRI ICA components (n ≈ XX subjects, XX networks)
+Pre-training on paired pre/post rs-fMRI ICA components (n ≈ 56 subjects, ~3000 networks)
 and fine-tuning with 5-fold cross-validation:
 
 | Network  | AUC  | F1   | Sensitivity | Specificity |
 |----------|------|------|-------------|-------------|
-| Motor    | —    | —    | —           | —           |
-| Vision   | —    | —    | —           | —           |
-| Language | —    | —    | —           | —           |
-| Frontal  | —    | —    | —           | —           |
-| Temporal | —    | —    | —           | —           |
+| Motor    | 0.93    | 0.90    | 0.87           | 0.93           |
+| Vision   | 0.94    | 0.89    | 0.87           | 0.89           |
+| Language | 0.93    | 0.89    | 0.90           | 0.87           |
+| Frontal  | 0.93    | 0.84    | 0.82           | 0.90           |
+| Temporal | 0.90    | 0.83    | 0.79           | 0.90           |
 
-> ⚠️ Results table will be updated upon paper acceptance. Placeholder rows are intentional —
-> populate with your numbers before making the repo public.
+
 
 ---
 
@@ -219,11 +218,15 @@ and fine-tuning with 5-fold cross-validation:
 If you use this code, please cite:
 
 ```bibtex
-@article{yourname2025fmricontrastive,
-  title   = {Self-Supervised Contrastive Learning of Functional Brain Network Representations for Surgical Outcome Prediction},
-  author  = {Your Name and Co-authors},
-  journal = {Under Review},
-  year    = {2025}
+@article{jeyabose2025multimodal,
+  title={Multimodal contrastive learning on rs-fMRI to quantify whole-brain network recovery after hypothalamic hamartoma surgery},
+  author={Jeyabose, Andrew and Robinson, Belfin and Leggio, Olivia and Kazemi, Meitra H and Boerwinkle, Varina L},
+  journal={BioMedical Engineering OnLine},
+  volume={24},
+  number={1},
+  pages={125},
+  year={2025},
+  publisher={Springer}
 }
 ```
 
