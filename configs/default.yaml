@@ -1,0 +1,36 @@
+# configs/default.yaml
+# ---------------------
+# All hyperparameters for fMRI contrastive pre-training.
+# Override any value via environment variable or CLI flag in train.py.
+
+data:
+  csv_path: "data/your_data.csv"      # ← update this path
+  temporal_input_dim: 590             # number of fMRI timepoints (resample target)
+  num_workers: 4
+
+model:
+  embedding_dim:        128           # encoder output dimension
+  projection_hidden_dim: 64           # projection head hidden layer
+  projection_dim:        32           # projection head output (loss space)
+
+training:
+  batch_size:                16
+  epochs:                   150
+  lr:                       1.0e-4
+  weight_decay:             0.0
+  temperature:              0.05      # NT-Xent temperature τ
+  early_stopping_patience:  20
+  early_stopping_min_delta: 0.01
+
+augmentation:
+  spatial:
+    angle_range:   15.0               # rotation ± degrees
+    noise_std:      0.01
+    flip_prob:      0.5
+  temporal:
+    mask_ratio:     0.15              # fraction of timepoints to zero
+    amplitude_min:  0.85
+    amplitude_max:  1.15
+    phase_shift_max: 5               # max timepoints to shift a segment
+
+output_dir: "outputs"

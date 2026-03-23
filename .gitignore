@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Outputs (weights, plots, losses)
+outputs/
+logs/
+*.pth
+*.npy
+*.png
+
+# Data — never commit clinical data
+data/*.csv
+data/sub-*/
+
+# Environment
+.env
+venv/
+.venv/
+*.egg
+
+# IDE
+.vscode/
+.idea/
